@@ -1,0 +1,367 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DDB51384-9C67-43BE-9C67-0CA48BF1F217}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NineVigor.Components.HealthRecord</RootNamespace>
+    <AssemblyName>NineVigor.Components.HealthRecord</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\lib\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BarcodeLib, Version=1.0.0.9, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v12.1, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v12.1.Core, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v12.1, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\DevExpress.Utils.v12.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v12.1, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v12.1, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraLayout.v12.1, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v12.1, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="FarPoint.CalcEngine, Version=4.0.3526.2008, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\FarPoint.CalcEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="FarPoint.Excel, Version=4.0.3526.2008, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\FarPoint.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="FarPoint.Win, Version=4.0.3526.2008, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\FarPoint.Win.dll</HintPath>
+    </Reference>
+    <Reference Include="FarPoint.Win.Spread, Version=4.0.3526.2008, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\FarPoint.Win.Spread.dll</HintPath>
+    </Reference>
+    <Reference Include="FarPoint.Win.Spread.Design, Version=4.0.3526.2008, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\FarPoint.Win.Spread.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="NineVigor.Components.HealthRecord, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="NineVigor.Domain.HealthRecord, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="NineVigor.FrameWork, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="NineVigor.FrameWork.WinForms, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>F:\Projects\BPM管理系统\BPM-Application\NineVigor.FrameWork.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CasTrack\ucPageCallBackCheckByDayReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CasTrack\ucPageCallBackCheckByDayReport.designer.cs">
+      <DependentUpon>ucPageCallBackCheckByDayReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CasTrack\ucMetCasReCallPrint.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CasTrack\ucMetCasReCallPrint.designer.cs">
+      <DependentUpon>ucMetCasReCallPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CasTrack\ucMetCasReCallPrintPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CasTrack\ucMetCasReCallPrintPanel.designer.cs">
+      <DependentUpon>ucMetCasReCallPrintPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CasTrack\ucMetCasReCallPrintPanel2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CasTrack\ucMetCasReCallPrintPanel2.designer.cs">
+      <DependentUpon>ucMetCasReCallPrintPanel2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CasTrack\ucMetCasReCallPrintWithNo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CasTrack\ucMetCasReCallPrintWithNo.designer.cs">
+      <DependentUpon>ucMetCasReCallPrintWithNo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CasTrack\ucMetCasReCallQuery.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CasTrack\ucMetCasReCallQuery.designer.cs">
+      <DependentUpon>ucMetCasReCallQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CasTrack\ucMetCasReCallQueryLocation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CasTrack\ucMetCasReCallQueryLocation.designer.cs">
+      <DependentUpon>ucMetCasReCallQueryLocation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CasDayReport\ucBedDayReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CasDayReport\ucBedDayReport.Designer.cs">
+      <DependentUpon>ucBedDayReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CasDayReport\ucBedDayReportDetail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CasDayReport\ucBedDayReportDetail.Designer.cs">
+      <DependentUpon>ucBedDayReportDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CasTrack\ucPageCallBackStateQuery.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CasTrack\ucPageCallBackStateQuery.designer.cs">
+      <DependentUpon>ucPageCallBackStateQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CasTrack\ucPageCallBackCheck.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CasTrack\ucPageCallBackCheck.designer.cs">
+      <DependentUpon>ucPageCallBackCheck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CasTrack\ucPageCallBackCheckHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CasTrack\ucPageCallBackCheckHistory.designer.cs">
+      <DependentUpon>ucPageCallBackCheckHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CasTrack\ucPageCallBackCheckUnCheck.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CasTrack\ucPageCallBackCheckUnCheck.designer.cs">
+      <DependentUpon>ucPageCallBackCheckUnCheck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CasLend\ucBorrowCase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CasLend\ucBorrowCase.designer.cs">
+      <DependentUpon>ucBorrowCase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CasLend\ucCaseLendQuery.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CasLend\ucCaseLendQuery.designer.cs">
+      <DependentUpon>ucCaseLendQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CasLend\ucReturnCase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CasLend\ucReturnCase.designer.cs">
+      <DependentUpon>ucReturnCase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CasMatience\ICD\frmICDInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CasMatience\ICD\frmICDInfo.designer.cs">
+      <DependentUpon>frmICDInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CasMatience\ICD\ucDiagMatience.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CasMatience\ICD\ucDiagMatience.Designer.cs">
+      <DependentUpon>ucDiagMatience.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CasPage\ucCaseMainInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CasPage\ucCaseMainInfo.Designer.cs">
+      <DependentUpon>ucCaseMainInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\ucDiagnose.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Common\ucDiagnose.Designer.cs">
+      <DependentUpon>ucDiagnose.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\ucDiagNoseSelect.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Common\ucDiagNoseSelect.Designer.cs">
+      <DependentUpon>ucDiagNoseSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\ucMrsBaseInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Common\ucMrsBaseInfo.Designer.cs">
+      <DependentUpon>ucMrsBaseInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\ucMrsExtBaseInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Common\ucMrsExtBaseInfo.Designer.cs">
+      <DependentUpon>ucMrsExtBaseInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\ucOperation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Common\ucOperation.Designer.cs">
+      <DependentUpon>ucOperation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OpsManager\ucOpsDocWorkDetail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OpsManager\ucOpsDocWorkDetail.Designer.cs">
+      <DependentUpon>ucOpsDocWorkDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CasTrack\ucPageCallBackCheckByDayReport.resx">
+      <DependentUpon>ucPageCallBackCheckByDayReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CasTrack\ucMetCasReCallPrint.resx">
+      <DependentUpon>ucMetCasReCallPrint.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CasTrack\ucMetCasReCallPrintPanel.resx">
+      <DependentUpon>ucMetCasReCallPrintPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CasTrack\ucMetCasReCallPrintPanel2.resx">
+      <DependentUpon>ucMetCasReCallPrintPanel2.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CasTrack\ucMetCasReCallPrintWithNo.resx">
+      <DependentUpon>ucMetCasReCallPrintWithNo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CasTrack\ucMetCasReCallQuery.resx">
+      <DependentUpon>ucMetCasReCallQuery.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CasTrack\ucMetCasReCallQueryLocation.resx">
+      <DependentUpon>ucMetCasReCallQueryLocation.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CasDayReport\ucBedDayReport.resx">
+      <DependentUpon>ucBedDayReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CasDayReport\ucBedDayReportDetail.resx">
+      <DependentUpon>ucBedDayReportDetail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CasTrack\ucPageCallBackStateQuery.resx">
+      <DependentUpon>ucPageCallBackStateQuery.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CasTrack\ucPageCallBackCheck.resx">
+      <DependentUpon>ucPageCallBackCheck.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CasTrack\ucPageCallBackCheckHistory.resx">
+      <DependentUpon>ucPageCallBackCheckHistory.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CasTrack\ucPageCallBackCheckUnCheck.resx">
+      <DependentUpon>ucPageCallBackCheckUnCheck.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CasLend\ucBorrowCase.resx">
+      <DependentUpon>ucBorrowCase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CasLend\ucCaseLendQuery.resx">
+      <DependentUpon>ucCaseLendQuery.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CasLend\ucReturnCase.resx">
+      <DependentUpon>ucReturnCase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CasMatience\ICD\frmICDInfo.resx">
+      <DependentUpon>frmICDInfo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CasMatience\ICD\ucDiagMatience.resx">
+      <DependentUpon>ucDiagMatience.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CasPage\ucCaseMainInfo.resx">
+      <DependentUpon>ucCaseMainInfo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\ucDiagnose.resx">
+      <DependentUpon>ucDiagnose.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\ucDiagNoseSelect.resx">
+      <DependentUpon>ucDiagNoseSelect.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\ucMrsBaseInfo.resx">
+      <DependentUpon>ucMrsBaseInfo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\ucMrsExtBaseInfo.resx">
+      <DependentUpon>ucMrsExtBaseInfo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\ucOperation.resx">
+      <DependentUpon>ucOperation.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OpsManager\ucOpsDocWorkDetail.resx">
+      <DependentUpon>ucOpsDocWorkDetail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="CasFlow\" />
+    <Folder Include="CasNotice\" />
+    <Folder Include="CasPrint\" />
+    <Folder Include="CasSearch\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

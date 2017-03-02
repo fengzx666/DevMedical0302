@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AE46E913-5250-4AC5-9881-ECC6B0C1B925}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NineVigor.Domain.HealthRecord</RootNamespace>
+    <AssemblyName>NineVigor.Domain.HealthRecord</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\lib\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NineVigor.FrameWork, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\NineVigor.FrameWork.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Dto\ICasBase.cs" />
+    <Compile Include="Dto\ICasBaseDiag.cs" />
+    <Compile Include="Dto\ICasBaseFees.cs" />
+    <Compile Include="Dto\ICasBaseFees2012.cs" />
+    <Compile Include="Dto\ICasBaseOperation.cs" />
+    <Compile Include="Dto\ICasCallBack.cs" />
+    <Compile Include="Dto\ICasDayReport.cs" />
+    <Compile Include="Dto\ICasDayReportDetail.cs" />
+    <Compile Include="Dto\ICasDiagOperation.cs" />
+    <Compile Include="Dto\ICasLend.cs" />
+    <Compile Include="Dto\IICDDamage.cs" />
+    <Compile Include="Dto\IICDDiagnose.cs" />
+    <Compile Include="Dto\IICDOperation.cs" />
+    <Compile Include="Entity\CasBaseDiag.cs" />
+    <Compile Include="Entity\CasBase.cs" />
+    <Compile Include="Entity\CasBaseFees.cs" />
+    <Compile Include="Entity\CasBaseFees2012.cs" />
+    <Compile Include="Entity\CasBaseOperation.cs" />
+    <Compile Include="Entity\CasCallBack.cs" />
+    <Compile Include="Entity\CasDayReport.cs" />
+    <Compile Include="Entity\CasDayReportDetail.cs" />
+    <Compile Include="Entity\CasDiagOperation.cs" />
+    <Compile Include="Entity\CasLend.cs" />
+    <Compile Include="Entity\ICDDamage.cs" />
+    <Compile Include="Entity\ICDDiagnose.cs" />
+    <Compile Include="Entity\ICDOperation.cs" />
+    <Compile Include="HealthRecordService.cs" />
+    <Compile Include="IHealthRecordService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\CasBaseRepository.cs" />
+    <Compile Include="Repository\ICasBaseRepository.cs" />
+    <Compile Include="Repository\ICDMaintenceRepository.cs" />
+    <Compile Include="Repository\IICDMaintenceRepository.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E0A2F635-A08B-435B-BCAE-3F43A53AB018}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NineVigor.Components.Analysis</RootNamespace>
+    <AssemblyName>NineVigor.Components.Analysis</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\lib\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Charts.v12.1.Core, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v12.1, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v12.1.Core, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v12.1, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v12.1, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\BPM业务管理系统\2.开发库\2.3代码实现\2.3.2源代码\郑大一附院\lib\DevExpress.XtraBars.v12.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v12.1, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v12.1.UI, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v12.1, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v12.1, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraLayout.v12.1, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPivotGrid.v12.1, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v12.1, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="FarPoint.CalcEngine, Version=4.0.3526.2008, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL" />
+    <Reference Include="FarPoint.Win, Version=4.0.3526.2008, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL" />
+    <Reference Include="FarPoint.Win.Spread, Version=4.0.3526.2008, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL" />
+    <Reference Include="FarPoint.Win.Spread.Design, Version=4.0.3526.2008, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL" />
+    <Reference Include="NineVigor.Domain.Authentication, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="NineVigor.FrameWork, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="NineVigor.FrameWork.WinForms, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Finance\ucDeptWeekAnaly.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Finance\ucDeptWeekAnaly.Designer.cs">
+      <DependentUpon>ucDeptWeekAnaly.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\ucInMainPatientFeeType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Finance\ucInMainPatientFeeType.Designer.cs">
+      <DependentUpon>ucInMainPatientFeeType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\ucMZDeptFeeAnaly.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Finance\ucMZDeptFeeAnaly.Designer.cs">
+      <DependentUpon>ucMZDeptFeeAnaly.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\ucInMainPatientFeeALL.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Finance\ucInMainPatientFeeALL.Designer.cs">
+      <DependentUpon>ucInMainPatientFeeALL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InMain\ucInProofIfno.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InMain\ucInProofIfno.Designer.cs">
+      <DependentUpon>ucInProofIfno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InMain\ucInProofMinDate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InMain\ucInProofMinDate.Designer.cs">
+      <DependentUpon>ucInProofMinDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InMain\ucInMainArea.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InMain\ucInMainArea.Designer.cs">
+      <DependentUpon>ucInMainArea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InMain\ucInMainProvinceArea.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InMain\ucInMainProvinceArea.Designer.cs">
+      <DependentUpon>ucInMainProvinceArea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InMain\ucInMainAreaProviceOut.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InMain\ucInMainAreaProviceOut.Designer.cs">
+      <DependentUpon>ucInMainAreaProviceOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Finance\ucDeptWeekAnaly.resx">
+      <DependentUpon>ucDeptWeekAnaly.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\ucInMainPatientFeeType.resx">
+      <DependentUpon>ucInMainPatientFeeType.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\ucMZDeptFeeAnaly.resx">
+      <DependentUpon>ucMZDeptFeeAnaly.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\ucInMainPatientFeeALL.resx">
+      <DependentUpon>ucInMainPatientFeeALL.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InMain\ucInProofIfno.resx">
+      <DependentUpon>ucInProofIfno.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InMain\ucInProofMinDate.resx">
+      <DependentUpon>ucInProofMinDate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InMain\ucInMainArea.resx">
+      <DependentUpon>ucInMainArea.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InMain\ucInMainProvinceArea.resx">
+      <DependentUpon>ucInMainProvinceArea.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InMain\ucInMainAreaProviceOut.resx">
+      <DependentUpon>ucInMainAreaProviceOut.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NineVigor.BizLogic.Analysis\NineVigor.BizLogic.Analysis.csproj">
+      <Project>{57C4B542-958D-4E08-884F-847C9F1155E7}</Project>
+      <Name>NineVigor.BizLogic.Analysis</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

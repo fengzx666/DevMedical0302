@@ -1,0 +1,5 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ReferencePath>D:\Projects\TeamCode\开发集成\代码\lib\</ReferencePath>
+  </PropertyGroup>
+</Project>
